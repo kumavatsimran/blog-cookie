@@ -18,6 +18,7 @@ const form=async(req,res)=>{
     return res.render('pages/blog')
 }
 const blogPage=async(req,res)=>{
+    console.log("enter");
     const blog=await blogDB.find()
 
 

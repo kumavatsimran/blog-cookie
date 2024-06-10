@@ -1,14 +1,4 @@
-const userAuth = (req,res,next) =>{
 
-    const {username, email, password} = req.body;
-
-    if(username && email && password){
-        next();
-    }else{
-        res.send("invalid user");
-    }
-
-}
 
 const isAuth = (req,res,next)=>{
     let {user} = req.cookies; 
@@ -20,4 +10,4 @@ const isAuth = (req,res,next)=>{
     }
 }
 
-module.exports = {userAuth, isAuth };
+module.exports = { isAuth };
