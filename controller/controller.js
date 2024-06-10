@@ -26,10 +26,10 @@ const blogPage=async(req,res)=>{
 }
 const AddBlog=async(req,res)=>{
     const image= req.file.path;
-    const {name,discribtion,}=req.body
+    const {name,discribtion,date}=req.body
 
     try{
-        let blog=await blogDB.create({name,discribtion,image})
+        let blog=await blogDB.create({name,discribtion,date,image})
         return res.redirect('/')
     }catch(error){
         console.log(error);
